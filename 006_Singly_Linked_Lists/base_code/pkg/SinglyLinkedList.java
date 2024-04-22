@@ -22,7 +22,7 @@ public class SinglyLinkedList {
 		if (n==null||pos<0)
 			return -1;
 		for(int i =0;i<pos;i++){
-			if(n.getNext==null)
+			if(n.getNext()==null)
 				return -1;
 			n=n.getNext();
 		}
@@ -33,10 +33,10 @@ public class SinglyLinkedList {
 	/*
 		Insert a new Node at the given position with the data given
 	*/
-	public void insert(int pos int data){
+	public void insert(int pos, int data){
 		Node n = head;
 		for(int i = 0;i<pos;i++){
-			if(n.getNext==null)
+			if(n.getNext()==null)
 				return;
 			n=n.getNext();
 		}
@@ -66,8 +66,9 @@ public class SinglyLinkedList {
 	*/
 	public void printList(){
 		Node n = head;
-		while(n.getNext!=null){
-			System.out.print(n.getData+"-");
+		while(n.getNext()!=null){
+			System.out.print(n.getData()+"*");
+			n=n.getNext();
 		}
 	}
 }
